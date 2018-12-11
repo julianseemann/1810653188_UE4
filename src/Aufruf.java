@@ -21,10 +21,23 @@ public class Aufruf
         lieblingsbuecher.add(new Book(200, datum, "My Book 4", "745854-124412-3487438348"));
         lieblingsbuecher.add(new Book(200, datum, "My Book 5", "672-5236236-123483475125"));
 
-        for (Book item:lieblingsbuecher)
+        for (Book a:lieblingsbuecher)
         {
-            System.out.println(item.getTitle()+ " hat "+ item.getPages()+ " Seiten und folgende ISBN: "+item.getIsbn());
+            System.out.println(a.getTitle()+ " hat "+ a.getPages()+ " Seiten und folgende ISBN: "+a.getIsbn());
         }
 
+
+        //Aufgabe 5
+        List<Paperbook> papierbuecher = new ArrayList<>();
+        papierbuecher.add(new Paperbook(200, datum, "My Paperbook 1", "0000-000000-0000","...", "April"));
+        papierbuecher.add(new Paperbook(210, datum, "My Paperbook 2", "0000-000000-0000","...", "April"));
+        papierbuecher.add(new Paperbook(240, datum, "My Paperbook 3", "0000-000000-0000","...", "January"));
+        papierbuecher.add(new Paperbook(100, datum, "My Paperbook 4", "0000-000000-0000","...", "March"));
+        papierbuecher.add(new Paperbook(140, datum, "My Paperbook 5", "0000-000000-0000","...", "October"));
+
+        for (Paperbook b:papierbuecher)
+        {
+            System.out.println(b.getTitle()+ " hat "+ b.getPages()+" Seiten und folgende ISBN: "+ b.getIsbn()+ " zusätzlich ist es im Monat "+b.getMonth()+" erschienen");
+        }
     }
 }
